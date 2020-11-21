@@ -6,14 +6,15 @@ import '@/assets/css/common.css'
 import axios from 'axios'
 
 Vue.prototype.$http = axios
-axios.defaults.baseURL = 'https://www.liulongbin.top:8888/api/private/v1/'
+axios.defaults.baseURL =/* 'http://120.53.120.229:8888/api/private/v1/' */
+'https://www.liulongbin.top:8888/api/private/v1/'
+axios.interceptors.request.use(config => {
+  config.headers.Authorization = window.sessionStorage.getItem('token')
+  return config
+})
 
 Vue.config.productionTip = false
-/* 
-  疑问=？ 为什么login res保存后，不能再axios外面使用，一定要请求时候使用sessionStorge.setItem
 
-
-*/
 new Vue({
   router,
   render: h => h(App)

@@ -43,7 +43,7 @@ export default {
                     { min: 3, max: 15, message: '长度在 3 到 15 个字符', trigger: 'blur' }
                 ]
             },
-            res:{}
+            res:null
         }
     },
     methods:{
@@ -55,16 +55,13 @@ export default {
                 if(!value) return console.log('登陆信息校验失败'+value);
                 this.$http.post('login',this.loginForm).then(({data:res})=>{
                     if(res.meta.status === 200) this.$message.success('欢迎回来')
-                        this.res = res
-                        console.log(this.res);
-
+                        this.res = res;
                 /* 设置登陆token */
-                sessionStorage.setItem('token',this.res.data.token)
+                sessionStorage.setItem('token',this.res.data.token);
                 /* 跳转详情页 */
-                this.$router.push('/home')                        
+                this.$router.push('/home');      
                 },err=>{this.$message.error('登陆失败,请稍后再试')})
-            })
-            console.log(this.res);
+            })  
         }
     }
 }
