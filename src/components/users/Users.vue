@@ -98,7 +98,6 @@
         :page-size="queryInfo.pagesize"
         layout="total, sizes, prev, pager, next, jumper"
         :total="total"
-        style="padding-top: 20px"
       >
       </el-pagination>
     </el-card>
@@ -141,7 +140,7 @@
       width="50%"
     >
       <el-form :model='editForm' label-width='80px' :rules='rules' ref="editForm">
-        <el-form-item label='用户名' prop='editUsername' :required='false'>
+        <el-form-item label='用户名' prop='editUsername'>
           <el-input v-model="editForm.username" disabled></el-input>
         </el-form-item>
         <el-form-item label='邮箱' prop='email'>

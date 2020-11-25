@@ -3,7 +3,7 @@ import VueRouter from 'vue-router'
 const Login = () => import('@/components/Login.vue')
 const Home = () => import('@/components/Home.vue')
 const WelCome = () => import('@/components/WelCome.vue')
-const Categories = () => import('@/components/users/Categories.vue')
+const Cate = () => import('@/components/goods/Cate.vue')
 const Goods = () => import('@/components/users/Goods.vue')
 const Orders = () => import('@/components/users/Orders.vue')
 const Params = () => import('@/components/users/Params.vue')
@@ -30,7 +30,7 @@ const routes = [
       { path: '/rights', component:Rights },
       { path: '/goods', component:Goods },
       { path: '/params', component: Params },
-      { path: '/categories', component: Categories },
+      { path: '/categories', component: Cate },
       { path: '/orders', component: Orders },
       { path: '/reports', component:Reports }
     ]
