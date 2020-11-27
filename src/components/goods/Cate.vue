@@ -162,7 +162,7 @@ export default {
         ],
       },
       parentCateList: [],
-      queryInfo: { type: 3, pagenum: 2, pagesize: 10 },
+      queryInfo: { type: 3, pagenum: 1, pagesize: 10 },
       catelist: [],
       total: 0,
       addCateDialogVisible: false,
