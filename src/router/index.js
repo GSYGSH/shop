@@ -4,13 +4,14 @@ const Login = () => import('@/components/Login.vue')
 const Home = () => import('@/components/Home.vue')
 const WelCome = () => import('@/components/WelCome.vue')
 const Cate = () => import('@/components/goods/Cate.vue')
-const Goods = () => import('@/components/users/Goods.vue')
+const Goods = () => import('@/components/goods/Goods.vue')
 const Orders = () => import('@/components/users/Orders.vue')
 const Params = () => import('@/components/goods/Params.vue')
 const Reports = () => import('@/components/users/Reports.vue')
 const Rights = () => import('@/components/power/Rights.vue')
 const Roles = () => import('@/components/power/Roles.vue')
 const Users = () => import('@/components/users/Users.vue')
+const Add = () =>import('@/components/goods/Add.vue')
 
 
 
@@ -32,7 +33,8 @@ const routes = [
       { path: '/params', component: Params },
       { path: '/categories', component: Cate },
       { path: '/orders', component: Orders },
-      { path: '/reports', component:Reports }
+      { path: '/reports', component: Reports },
+      { path: '/goods/Add',component:Add}
     ]
   }
 ]

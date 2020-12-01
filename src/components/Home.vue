@@ -11,7 +11,7 @@
                 <span>|||</span>
             </div>
           <el-menu
-            :default-active="$route.path"
+            default-active="/"
             class="el-menu-vertical-demo"
             background-color="#333744"
             text-color="#fff"

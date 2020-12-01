@@ -37,4 +37,5 @@ export default {
 .el-cascader-panel{
   height: 200px;
 }
+
 </style>
