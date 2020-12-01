@@ -292,8 +292,9 @@ export default {
         };
         /* 发送请求添加商品 */
         let { data: res } = await this.$http.post("goods", form);
+        console.log(res,form);
         if (res.meta.status !== 201)
-          return this.$message.error(`添加失败,${res.meta.msg}`);
+          return this.$message.error(`${res.meta.msg}`);
         this.$message.success("添加商品成功");
         this.$refs.addForm.resetFields();
       });
